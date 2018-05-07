@@ -121,7 +121,11 @@ static struct sitar_mbhc_config mbhc_cfg = {
 	.gpio = 0,
 	.gpio_irq = 0,
 	.gpio_level_insert = 0,
+#ifdef CONFIG_SWAP_GND_MIC
+	.swap_gnd_mic = true,
+#else
 	.swap_gnd_mic = NULL,
+#endif
 };
 
 static void msm8930_ext_control(struct snd_soc_codec *codec)

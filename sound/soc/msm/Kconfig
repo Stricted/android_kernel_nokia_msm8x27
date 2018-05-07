@@ -156,6 +156,11 @@ config SND_SOC_MSM8960
 	help
 	 To add support for SoC audio on MSM8960 and APQ8064 boards
 
+config SWAP_GND_MIC
+	bool "sets swap_gnd_mic to true"
+	depends on CONFIG_SND_SOC_MSM8960
+	default n
+
 config AUDIO_OCMEM
 	bool "Enable OCMEM for audio/voice usecase"
 	depends on MSM_OCMEM
